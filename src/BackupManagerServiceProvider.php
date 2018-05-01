@@ -28,6 +28,8 @@ class BackupManagerServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->setupRoutes($this->app->router);
+
         // use the vendor configuration file as fallback
         $this->mergeConfigFrom(
             __DIR__.'/config/backup.php', 'backpack.backupmanager'
@@ -74,8 +76,6 @@ class BackupManagerServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->setupRoutes($this->app->router);
-
         // use this if your package has a config file
         config([
                 'config/backup.php',

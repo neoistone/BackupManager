@@ -19,6 +19,12 @@ All Notable changes to `backupmanager` will be documented in this file
 ### Security
 - Nothing
 
+## [1.4.1] - 2018-05-02
+
+### Added
+- support for ```backpack_middleware()``` helper in the routes;
+
+
 ## [1.4.0] - 2018-04-23
 
 ### Added

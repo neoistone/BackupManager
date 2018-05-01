@@ -13,7 +13,7 @@
 Route::group([
     'namespace'  => 'Backpack\BackupManager\app\Http\Controllers',
     'prefix'     => config('backpack.base.route_prefix', 'admin'),
-    'middleware' => ['web', 'admin'],
+    'middleware' => ['web', backpack_middleware()],
 ], function () {
     Route::get('backup', 'BackupController@index');
     Route::put('backup/create', 'BackupController@create');
